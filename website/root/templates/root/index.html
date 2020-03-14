@@ -1,11 +1,16 @@
+{% load static %}
 <html>
     <header>
         <title>Bob King</title>
     </header>
     <body>
-    {% if error_no_person %}<p><strong>{{ error_no_person }}</strong></p>{% endif %}
-    {% if person %}
-    <h1>{{ person.name }}</h1>
-    {% endif %}
+        {% if error_no_person %}<p><strong>{{ error_no_person }}</strong></p>{% endif %}
+        {% if person %}
+        <h1>{{ person.name }}</h1>
+        <p>{{ person.tag_line }}</p>
+        {% with 'root/'|add:person.picture as persons_picture %}
+        <img src = "{% static persons_picture %}" alt="Picture of {{ person.name }}">
+        {% endwith %}
+        {% endif %}
     </body>
 </html>
