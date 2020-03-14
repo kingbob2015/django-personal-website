@@ -1,0 +1,11 @@
+<html>
+    <header>
+        <title>Bob King</title>
+    </header>
+    <body>
+    {% if error_no_person %}<p><strong>{{ error_no_person }}</strong></p>{% endif %}
+    {% if person %}
+    <h1>{{ person.name }}</h1>
+    {% endif %}
+    </body>
+</html>
