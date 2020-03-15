@@ -27,3 +27,29 @@ class Link(models.Model):
 
     def __str__(self):
         return f'{self.link_name} linked to {self.link_url}'
+
+
+class Project(models.Model):
+
+    project_types = (
+        (1, "Personal"),
+        (2, "Professional")
+    )
+
+    person = models.ForeignKey(Person, on_delete=models.CASCADE)
+    picture = models.CharField(max_length=50)  # Just the name of the file stored in the static files
+    name = models.CharField(max_length=50)
+    tag_line = models.CharField(max_length=250)
+    link_url = models.CharField(max_length=100, blank=True)
+    type = models.IntegerField(choices=project_types)
+
+    def __str__(self):
+        return f'{self.name}: {self.tag_line}'
+
+
+class ProjectTechnology(models.Model):
+    project = models.ForeignKey(Project, on_delete=models.CASCADE)
+    technology = models.CharField(max_length=50)
+
+    def __str__(self):
+        return f'{self.technology} used in {self.project.name}'
