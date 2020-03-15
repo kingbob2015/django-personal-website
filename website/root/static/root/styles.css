@@ -1,0 +1,29 @@
+body{
+    margin: 0;
+    text-align: center;
+    background-color: #EEEEEE;
+}
+
+.about-div{
+    text-align: left;
+}
+
+.contact-btn{
+    background-color: #00ADB5;
+    border-color: #00ADB5;
+}
+
+.header-div {
+    position: relative;
+    color: #393E46;
+    background-color: #393E46;
+    color: #EEEEEE;
+}
+
+.profile-picture{
+    border-radius: 50%;
+}
+
+.skills-list{
+    columns: 3
+}
