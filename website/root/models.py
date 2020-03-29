@@ -31,17 +31,17 @@ class Link(models.Model):
 
 class Project(models.Model):
 
-    project_types = (
-        (1, "Personal"),
-        (2, "Professional")
-    )
+    project_types = [
+        ("Personal", "Personal"),
+        ("Professional", "Professional"),
+    ]
 
     person = models.ForeignKey(Person, on_delete=models.CASCADE)
     picture = models.CharField(max_length=50)  # Just the name of the file stored in the static files
     name = models.CharField(max_length=50)
     tag_line = models.CharField(max_length=250)
     link_url = models.CharField(max_length=100, blank=True)
-    type = models.IntegerField(choices=project_types)
+    type = models.CharField(max_length=25, choices=project_types)
 
     def __str__(self):
         return f'{self.name}: {self.tag_line}'

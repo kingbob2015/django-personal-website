@@ -1,38 +1,50 @@
-body{
-    margin: 0;
-    text-align: center;
-    background-color: #323232;
-    color: #FFFFFF;
+body {
+  margin: 0;
+  text-align: center;
+  background-color: #323232;
+  color: #ffffff;
 }
 
-hr{
-    border-top: 1px dotted #FFFFFF;
+hr {
+  border-top: 1px dotted #ffffff;
 }
 
-.about-div{
-    text-align: left;
+.about-div {
+  text-align: left;
 }
 
-.contact-btn{
-    background-color: #0d7377;
-    border-color: #0d7377;
+.contact-btn {
+  background-color: #0d7377;
+  border-color: #0d7377;
 }
 
 .header-div {
-    position: relative;
-    color: #393E46;
-    background-color: #212121;
-    color: #FFFFFF;
+  position: relative;
+  color: #393e46;
+  background-color: #212121;
+  color: #ffffff;
 }
 
-.profile-picture{
-    border-radius: 50%;
+.personal-links {
+  padding-bottom: 25px;
 }
 
-.section-split{
-    padding-top: 50px;
+.profile-picture {
+  border-radius: 50%;
 }
 
-.skills-list{
-    columns: 3
+.project-title {
+  text-decoration: underline;
+}
+
+.section-split {
+  padding-top: 50px;
+}
+
+.skills-list {
+  columns: 3;
+}
+
+.tech-used {
+  margin-top: 10px;
 }
